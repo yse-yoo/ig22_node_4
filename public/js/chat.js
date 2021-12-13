@@ -7,6 +7,13 @@ $(() => {
     const message = $('#message')
     const chatList = $('#chatList')
 
+    //受信（じゅしん）処理（しょり）
+    socket.on('message', (data) => {
+        console.log(data)
+        let chatElement = $('<p>').append(data.message)
+        chatList.prepend(chatElement)
+    })
+
     //ボタンクリック
     $('#send').on('click', () => {
         if (!message.val()) return
