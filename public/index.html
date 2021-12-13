@@ -9,6 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+
+    <textarea id="message" class="form-control"></textarea>
+    <button id="send" class="btn btn-primary">Send</button>
+
+    <h3>Message</h3>
+    <div id="chatList"></div>
     
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/chat.js"></script>
