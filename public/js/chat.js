@@ -10,8 +10,10 @@ $(() => {
     //ボタンクリック
     $('#send').on('click', () => {
         if (!message.val()) return
-        //送信処理        
-
+        //送信処理
+        socket.emit('message', {
+            message: message.val()
+        })
         //メッセージクリア
         message.val('')
     })
