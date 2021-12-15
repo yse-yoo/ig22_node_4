@@ -1,9 +1,7 @@
 const express = require('express')
 const app = express()
-
 //httpをexpressに設定して作成
 const http = require('http').createServer(app)
-
 //Socket.ioをつかえるようにする
 const io = require('socket.io')(http)
 
@@ -22,7 +20,6 @@ io.on('connection', (socket) => {
         io.emit('message', data)
     })
 })
-
 
 http.listen(port, host, () => {
     console.log('http://' + host + ':' + port)

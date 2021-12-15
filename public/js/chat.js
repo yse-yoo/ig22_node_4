@@ -1,8 +1,6 @@
 $(() => {
     const url = ''
     let socket = io.connect(url)
-    console.log(socket)
-
     //HTMLタグ(Element）を取得
     const message = $('#message')
     const chatList = $('#chatList')
